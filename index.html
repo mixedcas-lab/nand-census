@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NAND Census</title>
+<meta name="description" content="Daily-updated index of NAND flash papers in ISSCC, VLSI, JSSC, CICC, ESSCIRC/ESSERC, A-SSCC, TCAS-I/II, SSC-L, TVLSI, IMW, IEDM and IEEE TED. Maintained by MCAS Lab, University of Seoul.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="topbar">
+    <div class="brand">
+      <a href="https://mixedcas-lab.github.io/" title="MCAS Lab"><img src="assets/mcaslab.png" alt="MCAS Lab — Mixed-Signal Circuits and Systems" height="26"></a>
+      <span class="brand-sep" aria-hidden="true"></span>
+      <a href="https://www.uos.ac.kr" title="University of Seoul"><img src="assets/uos.png" alt="University of Seoul" height="15"></a>
+    </div>
+    <nav class="sister" aria-label="Census sites"><a href="https://mixedcas-lab.github.io/adc-census/">ADC</a><a href="https://mixedcas-lab.github.io/dac-census/">DAC</a><a href="https://mixedcas-lab.github.io/pll-census/">PLL</a><a href="https://mixedcas-lab.github.io/ldo-census/">LDO</a><a href="https://mixedcas-lab.github.io/pmic-census/">PMIC</a><a href="https://mixedcas-lab.github.io/nand-census/" aria-current="page">NAND</a></nav>
+    </div>
+    <h1>NAND Census</h1>
+    <p class="lede" id="lede">Loading the paper index…</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="summary" id="summary" hidden></div>
+
+  <section class="controls" aria-label="Filters">
+    <div class="row">
+      <label class="search">
+        <span class="sr">Search</span>
+        <input id="q" type="search" placeholder="Search titles, authors, affiliations, topics" autocomplete="off">
+      </label>
+      <label class="field"><span>From</span><select id="y0"></select></label>
+      <label class="field"><span>To</span><select id="y1"></select></label>
+    </div>
+    <div class="row chips-row">
+      <span class="row-label">Venue</span>
+      <div class="chips" id="venues"></div>
+    </div>
+    <div class="row chips-row">
+      <span class="row-label">Topic</span>
+      <div class="chips" id="topics"></div>
+    </div>
+    <div class="row chips-row">
+      <span class="row-label">Company</span>
+      <div class="chips" id="companies"></div>
+    </div>
+    <div class="row">
+      <label class="field"><span>Country</span><select id="country"><option value="">All</option></select></label>
+      <label class="check"><input type="checkbox" id="related"> Include papers that only mention NAND in the abstract</label>
+      <label class="check"><input type="checkbox" id="fresh"> Added in the latest update</label>
+      <button type="button" class="link-btn" id="reset">Clear filters</button>
+    </div>
+  </section>
+
+  <section class="results" aria-live="polite">
+    <div class="results-head">
+      <p id="count"></p>
+      <div class="results-tools">
+        <label class="field"><span>Sort</span>
+          <select id="sort">
+            <option value="date">Newest first</option>
+            <option value="old">Oldest first</option>
+            <option value="venue">Venue</option>
+          </select>
+        </label>
+        <button type="button" class="btn" id="csv">Download CSV</button>
+      </div>
+    </div>
+    <div class="table" role="table" aria-label="Papers">
+      <div class="thead" role="row">
+        <span role="columnheader">Published</span>
+        <span role="columnheader">Paper</span>
+      </div>
+      <div id="rows"></div>
+    </div>
+    <button type="button" class="btn more" id="more" hidden>Show more</button>
+    <p class="empty" id="empty" hidden></p>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>Papers are selected and tagged automatically from IEEE titles and abstracts (topic tags from the title and the first two abstract sentences; companies from author affiliations). The lab removes or retags papers in <a href="https://github.com/mixedcas-lab/nand-census/blob/main/data/overrides.csv">overrides.csv</a>; use <b>Report</b> under a paper if it is not about NAND flash or a tag is wrong. IEDM and IEEE TED are covered through NAND/flash keyword searches.</p>
+  <p>Bibliographic metadata from the IEEE Xplore API; abstracts and full texts are not hosted. Maintained by <a href="https://mixedcas-lab.github.io/">MCAS Lab</a>, University of Seoul. Sister sites: <a href="https://mixedcas-lab.github.io/adc-census/">ADC Census</a>, <a href="https://mixedcas-lab.github.io/dac-census/">DAC Census</a>, <a href="https://mixedcas-lab.github.io/pll-census/">PLL Census</a>, <a href="https://mixedcas-lab.github.io/ldo-census/">LDO Census</a> and <a href="https://mixedcas-lab.github.io/pmic-census/">PMIC Census</a>. Corrections are welcome as pull requests or issues on <a href="https://github.com/mixedcas-lab/nand-census">GitHub</a>.</p>
+</footer>
+
+<script src="app.js"></script>
+<script src="https://mixedcas-lab.github.io/adc-census/deadlines.js?v=6" data-field="nand" defer></script>
+</body>
+</html>
