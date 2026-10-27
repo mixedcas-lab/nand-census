@@ -14,6 +14,7 @@ collector/venues.json           venue 이름 매칭, 캐시 위치, 시작 연�
 collector/test_build.py         오프라인 테스트
 data/overrides.csv              사람이 고친 값: 논문 제외, 주제 태그 교체
 scripts/update.sh               랩 서버 cron용: 재생성 → 커밋 → push
+docs/server-setup.md            랩 서버 설정·첫 빌드 안내 (서버 작업용)
 ```
 
 ## 동작 방식
