@@ -57,7 +57,7 @@ a { color: var(--signal); text-underline-offset: 2px; }
   font-stretch: 125%;
   letter-spacing: -0.02em;
 }
-.lede { margin: 14px 0 0; max-width: 68ch; color: var(--ink-2); font-size: 17px; }
+.lede { margin: 14px 0 0; max-width: 100ch; color: var(--ink-2); font-size: 17px; }
 .lede strong { color: var(--ink); font-weight: 600; }
 
 /* figure */
@@ -296,3 +296,4 @@ select {
 @media (max-width: 760px) {
   .tr { grid-template-columns: 1fr; }
 }
+.nowrap { white-space: nowrap; }

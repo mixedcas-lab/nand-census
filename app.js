@@ -208,7 +208,7 @@
     var nv = Object.keys(META.by_venue || {}).length;
     $("lede").innerHTML = "<strong>" + core.toLocaleString() + " NAND flash papers</strong> from " + nv +
       " IEEE circuits and memory-device venues" + (META.coverage_from ? ", " + fmtDate(META.coverage_from) + " to " + fmtDate(META.coverage_to) : "") +
-      ". Updated automatically; last update " + esc(META.updated || "") +
+      ".<br>Updated automatically, last update <span class=\"nowrap\">" + esc(META.updated || "") + "</span>" +
       (META.last_run_new ? ", with " + META.last_run_new + " papers added in the latest update." : ".");
     var years = {}, thisYear = new Date().getFullYear();
     ALL.forEach(function (p) { if (p.lv === "core" && p.y) years[p.y] = (years[p.y] || 0) + 1; });
