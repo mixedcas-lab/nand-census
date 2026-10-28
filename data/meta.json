@@ -1,1 +1,48 @@
-{}
+{
+ "title": "NAND Census",
+ "source": "IEEE Xplore API (records collected by adc-census)",
+ "updated": "2026-10-28",
+ "coverage_from": "1997-01",
+ "coverage_to": "2026-10",
+ "total": 1709,
+ "core": 1194,
+ "by_venue": {
+  "TVLSI": 53,
+  "TED": 326,
+  "TCAS-I": 27,
+  "VLSI": 70,
+  "IMW": 264,
+  "ISSCC": 101,
+  "JSSC": 81,
+  "SSC-L": 7,
+  "IEDM": 207,
+  "ESSCIRC": 8,
+  "TCAS-II": 24,
+  "A-SSCC": 18,
+  "CICC": 8
+ },
+ "by_topic": {
+  "Program/erase scheme": 453,
+  "Controller/ECC/SSD": 144,
+  "Device/cell": 401,
+  "Chip": 435,
+  "Reliability": 467,
+  "Compute/search": 87,
+  "Unspecified": 111,
+  "Sensing/page buffer": 117,
+  "HV/WL driver": 55,
+  "I/O interface": 80
+ },
+ "by_company": {
+  "Other industry": 147,
+  "Macronix": 97,
+  "Samsung": 185,
+  "Kioxia/Toshiba": 124,
+  "Western Digital": 56,
+  "YMTC": 4,
+  "SK hynix": 77,
+  "Micron": 60,
+  "Intel/Solidigm": 39
+ },
+ "last_run_new": 0
+}
