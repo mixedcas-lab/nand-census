@@ -1,6 +1,6 @@
 # NAND Census — Claude Code 작업 지침
 
-ISSCC·VLSI·JSSC·CICC·ESSCIRC/ESSERC·A-SSCC·SSC-L·TCAS-I/II·TVLSI와 메모리 소자 venue(IMW·NVSMW·IEDM·IEEE TED)의 NAND flash 논문 목록을 GitHub Pages(https://mixedcas-lab.github.io/nand-census/)에 공개하는 저장소다. **서지 정보와 주제 태그만 다루고 수치는 추출하지 않는다.** 자매 저장소 mixedcas-lab/adc-census의 수집기가 랩 서버에 받아 둔 IEEE 레코드 캐시(`~/adc-census/cache/raw`)를 읽기만 하며, **IEEE API를 직접 호출하지 않는다.** IMW·NVSMW·IEDM·TED는 adc-census `collector/venues.json`의 `queries`에 이 사이트용으로 들어 있다(IEDM·TED는 NAND/flash 키워드 검색). 랩 서버 cron이 `scripts/update.sh`로 매일 재분류하고 바뀐 것이 있을 때만 push한다.
+ISSCC·VLSI·JSSC·CICC·ESSCIRC/ESSERC·A-SSCC·SSC-L·TCAS-I/II·TVLSI와 메모리 소자 venue(IMW·NVSMW·IEDM·IRPS·IEEE TED·IEEE EDL, 2021년 이전 VLSI Technology)의 NAND flash 논문 목록을 GitHub Pages(https://mixedcas-lab.github.io/nand-census/)에 공개하는 저장소다. **서지 정보와 주제 태그만 다루고 수치는 추출하지 않는다.** 자매 저장소 mixedcas-lab/adc-census의 수집기가 랩 서버에 받아 둔 IEEE 레코드 캐시(`~/adc-census/cache/raw`)를 읽기만 하며, **IEEE API를 직접 호출하지 않는다.** IMW·NVSMW·IEDM·TED는 adc-census `collector/venues.json`의 `queries`에 이 사이트용으로 들어 있다(IEDM·TED는 NAND/flash 키워드 검색). 랩 서버 cron이 `scripts/update.sh`로 매일 재분류하고 바뀐 것이 있을 때만 push한다.
 
 ## 반드시 지킬 것
 

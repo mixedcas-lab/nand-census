@@ -123,6 +123,9 @@ class TestBuild(unittest.TestCase):
         self.assertEqual(build.venue_of("2008 Joint Non-Volatile Semiconductor Memory Workshop and International Conference on Memory Technology and Design", v), "IMW")
         self.assertEqual(build.venue_of("2023 International Electron Devices Meeting (IEDM)", v), "IEDM")
         self.assertEqual(build.venue_of("IEEE Transactions on Electron Devices", v), "TED")
+        self.assertEqual(build.venue_of("2024 IEEE International Reliability Physics Symposium (IRPS)", v), "IRPS")
+        self.assertEqual(build.venue_of("IEEE Electron Device Letters", v), "EDL")
+        self.assertEqual(build.venue_of("2019 Symposium on VLSI Technology", v), "VLSI")
         self.assertEqual(build.venue_of("2025 IEEE International Solid-State Circuits Conference (ISSCC)", v), "ISSCC")
         self.assertIsNone(build.venue_of("IEEE Access", v))
 

@@ -257,7 +257,7 @@
       $("lede").textContent = "The paper index is being built.";
       $("empty").hidden = false;
       $("empty").innerHTML = "The first list appears after the lab server's daily run, once the shared IEEE cache has fetched " +
-        "IMW, IEDM and IEEE TED. Until then, see the sister sites above.";
+        "IMW, IEDM, IRPS, IEEE TED and IEEE EDL. Until then, see the sister sites below.";
       $("count").textContent = "";
       return;
     }

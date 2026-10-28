@@ -1,5 +1,5 @@
 {
- "_comment": "since_year: first publication year shown. cache: the adc-census record cache on this server (overridable with $NAND_CENSUS_CACHE or --cache). venues: regex on the IEEE publication_title that assigns the venue. IMW/NVSMW, IEDM and TED are fetched into the cache by adc-census for this site (IEDM and TED only as NAND/flash keyword hits). IEEE Access is left out because adc-census only fetches its converter papers.",
+ "_comment": "since_year: first publication year shown. cache: the adc-census record cache on this server (overridable with $NAND_CENSUS_CACHE or --cache). venues: regex on the IEEE publication_title that assigns the venue. IMW/NVSMW, IEDM, TED, IRPS, EDL and pre-2022 VLSI Technology are fetched into the cache by adc-census for this site (all but IMW only as NAND/flash keyword hits). IEEE Access is left out because adc-census only fetches its converter papers.",
  "since_year": 1997,
  "cache": "~/adc-census/cache/raw",
  "venues": [
@@ -15,6 +15,8 @@
   {"name": "VLSI",    "match": "symposium on vlsi"},
   {"name": "CICC",    "match": "custom integrated circuits conference|\\bcicc\\b"},
   {"name": "IMW",     "match": "international memory workshop|non-?volatile semiconductor memory workshop|\\bimw\\b|\\bnvsmw\\b"},
-  {"name": "IEDM",    "match": "electron devices meeting|\\biedm\\b"}
+  {"name": "IEDM",    "match": "electron devices meeting|\\biedm\\b"},
+  {"name": "IRPS",    "match": "reliability physics symposium|\\birps\\b"},
+  {"name": "EDL",     "match": "electron device letters"}
  ]
 }

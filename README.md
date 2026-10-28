@@ -2,7 +2,7 @@
 
 NAND flash 논문 목록: https://mixedcas-lab.github.io/nand-census/
 
-ISSCC·VLSI·JSSC·CICC·ESSCIRC/ESSERC·A-SSCC·SSC-L·TCAS-I/II·TVLSI와 메모리 소자 venue인 IMW(구 NVSMW)·IEDM·IEEE TED에서 NAND flash 논문을 골라, 서지 정보와 주제 태그로 정리합니다. 용량·층수·속도 같은 수치는 추출하지 않습니다. 서울시립대학교 MCAS Lab이 관리합니다.
+ISSCC·VLSI·JSSC·CICC·ESSCIRC/ESSERC·A-SSCC·SSC-L·TCAS-I/II·TVLSI와 메모리 소자 venue인 IMW(구 NVSMW)·IEDM·IRPS·IEEE TED·IEEE EDL에서 NAND flash 논문을 골라, 서지 정보와 주제 태그로 정리합니다. 용량·층수·속도 같은 수치는 추출하지 않습니다. 서울시립대학교 MCAS Lab이 관리합니다.
 
 ## 구성
 
@@ -19,7 +19,7 @@ docs/server-setup.md            랩 서버 설정·첫 빌드 안내 (서버 작
 
 ## 동작 방식
 
-1. **데이터**: adc-census 수집기가 랩 서버 캐시(`~/adc-census/cache/raw`)에 회로 venue 전체 논문과 IMW·NVSMW 전체, IEDM·TED의 NAND/flash 키워드 검색 결과를 받아 둡니다. 이 저장소는 그 캐시를 읽기만 하므로 IEEE API를 따로 쓰지 않습니다.
+1. **데이터**: adc-census 수집기가 랩 서버 캐시(`~/adc-census/cache/raw`)에 회로 venue 전체 논문과 IMW·NVSMW 전체, IEDM·TED·IRPS·EDL·VLSI Technology(2021년 이전)의 NAND/flash 키워드 검색 결과를 받아 둡니다. 이 저장소는 그 캐시를 읽기만 하므로 IEEE API를 따로 쓰지 않습니다.
 2. **판별**: 제목에 NAND, flash memory, V-NAND, charge-trap/floating-gate flash, page buffer, 3D NAND 등이 있으면 core입니다. flash ADC·NAND gate·NOR/embedded flash는 제외합니다. 제목에는 없고 초록에만 NAND가 나오거나, NAND가 제목에 없는 SSD 시스템 논문은 related입니다.
 3. **태그**: 주제(Chip, Sensing/page buffer, HV/WL driver, I/O interface, Program/erase scheme, Controller/ECC/SSD, Reliability, Device/cell, Compute/search)는 제목과 초록 첫 두 문장에서, 회사(Samsung, SK hynix, Kioxia/Toshiba, Western Digital, Micron, Intel/Solidigm, YMTC, Macronix)는 저자 소속에서 붙입니다.
 4. **공개**: cron이 매일 06:57(adc-census 06:17 갱신 뒤) 재생성하고, 바뀐 것이 있으면 커밋·push합니다.
